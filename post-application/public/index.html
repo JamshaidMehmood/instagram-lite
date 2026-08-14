@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Matched to the light and dark surface colours so the browser chrome
+         does not clash with whichever mode the app is rendering. -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F8F9FB" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#06080D" />
+
+    <meta
+      name="description"
+      content="Share photos, likes and comments — a small Instagram-style app built with React, TypeScript, Express and MongoDB."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Warms up the DNS and TLS handshake to the API before the bundle has
+         parsed, so the first feed request is not waiting on connection setup. -->
+    <link rel="preconnect" href="http://localhost:5000" crossorigin />
+
+    <title>Instagram Lite</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

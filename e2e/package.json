@@ -1,0 +1,19 @@
+{
+  "name": "instagram-lite-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "End-to-end tests driving the real API and SPA with Playwright",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "seed": "tsx scripts/seedTestDb.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^20.16.5",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    // Dev-only tooling. The seed and the Playwright photo fetcher are run with
+    // tsx, never in production, so they (and their heavy `playwright`
+    // devDependency) stay out of the shipped `dist`. `npm run typecheck` still
+    // covers them through the base tsconfig.
+    "src/scripts"
+  ]
+}

@@ -1,0 +1,34 @@
+/*
+ * Almost everything is handled by MUI's CssBaseline and the theme. What is
+ * left is the couple of things a theme cannot express.
+ *
+ * The previous file set a serif font, a purple sticky header and a fixed
+ * 500px content column globally — rules that fought the component styles on
+ * every page.
+ */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  /* Reserving the scrollbar gutter stops the layout shifting sideways when a
+     short page grows tall enough to scroll. */
+  scrollbar-gutter: stable;
+  overscroll-behavior-y: none;
+}
+
+/* Respect a user who has asked their OS to reduce motion: the like burst,
+   image fades and hover zooms all collapse to instant state changes. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
