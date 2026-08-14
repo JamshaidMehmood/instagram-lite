@@ -190,7 +190,14 @@ export function GoogleSignInButton({ text, redirectTo = '/', onError }: GoogleSi
   return (
     <Box sx={{ position: 'relative', minHeight: BUTTON_HEIGHT }}>
       {/* Left empty for GSI to fill. React must not own these children. */}
-      <Box ref={containerRef} sx={{ display: 'flex', justifyContent: 'center' }} />
+      <Box
+        ref={containerRef}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          '& iframe': { colorScheme: 'normal' },
+        }}
+      />
 
       {isLoading && (
         <Box
